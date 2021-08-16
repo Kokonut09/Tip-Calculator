@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_y" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="adN-sv-hqe">
+                                <rect key="frame" x="41.5" y="145" width="331" height="74"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YmG-Xl-qgQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="74"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2P-82-Xxf">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax %:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9u-ge-7bb">
+                                                <rect key="frame" x="0.0" y="41" width="50.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mdi-kf-KFU">
+                                        <rect key="frame" x="58.5" y="0.0" width="272.5" height="74"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill subtotal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIf-F4-q3M" customClass="MoneyTextField" customModule="Tip_y" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="272.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill tax %" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLf-6H-2Ov" customClass="MoneyTextField" customModule="Tip_y" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="40" width="272.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tyH-1l-mtz">
+                                <rect key="frame" x="41.5" y="279" width="331" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCl-RE-uiu">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-V2-0as" customClass="MoneyButtons" customModule="Tip_y" customModuleProvider="target">
+                                        <rect key="frame" x="66" y="0.0" width="66.5" height="34"/>
+                                        <state key="normal" title="10%"/>
+                                        <connections>
+                                            <action selector="tenPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UYb-XM-5QX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kC1-AN-nqG" customClass="MoneyButtons" customModule="Tip_y" customModuleProvider="target">
+                                        <rect key="frame" x="132.5" y="0.0" width="66" height="34"/>
+                                        <state key="normal" title="15%"/>
+                                        <connections>
+                                            <action selector="fifteenPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQD-Wj-Ure"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVu-Ok-R3Q" customClass="MoneyButtons" customModule="Tip_y" customModuleProvider="target">
+                                        <rect key="frame" x="198.5" y="0.0" width="66.5" height="34"/>
+                                        <state key="normal" title="18%"/>
+                                        <connections>
+                                            <action selector="eighteenPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YPD-cy-gA4"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom %" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbD-Ry-M7N">
+                                        <rect key="frame" x="265" y="0.0" width="66" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip$y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIL-Jg-qs5">
+                                <rect key="frame" x="40" y="60" width="334" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-dz-Fr7" customClass="MoneyButtons" customModule="Tip_y" customModuleProvider="target">
+                                <rect key="frame" x="124" y="363" width="166" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BaD-dz-Fr7" secondAttribute="height" multiplier="16:9" id="Xot-zl-hZB"/>
+                                </constraints>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hk-su-NFI"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6f-tQ-XTU">
+                                <rect key="frame" x="134.5" y="606" width="145.5" height="41"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hwf-JP-3U7">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgr-4Q-SnP">
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Total:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jl-zk-1kD">
+                                                <rect key="frame" x="0.0" y="20.5" width="93" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o08-Ot-5hs">
+                                        <rect key="frame" x="101" y="0.0" width="44.5" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usp-hz-Tlq">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjx-8H-Rwr">
+                                                <rect key="frame" x="0.0" y="20.5" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BaD-dz-Fr7" firstAttribute="top" secondItem="tyH-1l-mtz" secondAttribute="bottom" constant="50" id="12P-1W-NSz"/>
+                            <constraint firstItem="G6f-tQ-XTU" firstAttribute="top" secondItem="BaD-dz-Fr7" secondAttribute="bottom" constant="150" id="7C7-s0-9un"/>
+                            <constraint firstItem="adN-sv-hqe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="BGk-Fn-Btm"/>
+                            <constraint firstItem="adN-sv-hqe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dlz-XT-ZQt"/>
+                            <constraint firstItem="G6f-tQ-XTU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E8a-gq-sXi"/>
+                            <constraint firstItem="adN-sv-hqe" firstAttribute="top" secondItem="ZIL-Jg-qs5" secondAttribute="bottom" constant="32" id="QIs-tP-BJq"/>
+                            <constraint firstItem="tyH-1l-mtz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="R6P-zA-Vbm"/>
+                            <constraint firstItem="tyH-1l-mtz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XJu-Az-RXb"/>
+                            <constraint firstItem="ZIL-Jg-qs5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="epG-9Y-jhC"/>
+                            <constraint firstItem="BaD-dz-Fr7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="ird-l3-XML"/>
+                            <constraint firstItem="ZIL-Jg-qs5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="kRa-J3-9vb"/>
+                            <constraint firstItem="tyH-1l-mtz" firstAttribute="top" secondItem="adN-sv-hqe" secondAttribute="bottom" constant="60" id="kUn-LD-QVn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZIL-Jg-qs5" secondAttribute="trailing" constant="40" id="s7X-Qj-gff"/>
+                            <constraint firstItem="BaD-dz-Fr7" firstAttribute="centerX" secondItem="tyH-1l-mtz" secondAttribute="centerX" id="y3R-pJ-GEm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billSubtotalTextField" destination="zIf-F4-q3M" id="Lcp-Wn-lR1"/>
+                        <outlet property="billTaxTextField" destination="xLf-6H-2Ov" id="KxA-3b-R2h"/>
+                        <outlet property="billTotalLabel" destination="rjx-8H-Rwr" id="mhK-ue-dKt"/>
+                        <outlet property="customTipTextField" destination="pbD-Ry-M7N" id="uer-g3-eeJ"/>
+                        <outlet property="tipAmountLabel" destination="Usp-hz-Tlq" id="e6R-fP-76x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
